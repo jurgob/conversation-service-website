@@ -31,17 +31,17 @@ const HeroText = styled.p`
 `
 
 
-function Intro(){
- return <HeroFirst>
+function Intro() {
+  return <HeroFirst>
     <div style={{ width: "40%" }}>
-      <HeroTitle>Enable RealTime comunication with your customers. In every possible channel</HeroTitle>
+      <HeroTitle>Enable Real Time comunication with your customers. In every possible channel</HeroTitle>
       <HeroSubTitle>The most flexible comunication api in the world.</HeroSubTitle>
-      <HeroText>Comunication is the key for the success of your business. But today comunication must be: <br /><br />
-       <b>Multichannel: </b>Comunication can happen in every possible way.With Conversation API you can manage with just one api Telephone Calls, Video Call, Whatsapp, viber, facebook messages, push notification, In App Message and Audio, Mails. <br /><br />
-       <b>Context Aware: </b>Keep the comunication context. Multichannel is not enough, your customer need to be able to switch between channels effortless. <br /><br />
-       <b>History Aware: </b>Keep track of every comunication.In Conversation API all your comunication datas are stored allowing you to use them in a flexible way. Give your customer a conversation history. Keep track or their past. Save every events.<br /><br />
-       <b>Give advenced functionality: </b>Conversation API is far more then this.Record your calls.use text to speech.Take advandtage of the speech to text. Transcribe every audio in a different text.<br /><br />
-        </HeroText>
+      <HeroText>For businesses to succeed today they must communicate with their customers under their own terms. Your communication solution must be: <br /><br />
+        <b>Multichannel: </b>Bring the conversation to where your customer feels most comfortable. With Vonage Conversations you can manage all your channels with just one API - Telephone Calls, Video Calls, Whatsapp, Viber, Facebook Messanger, Push notifications, In-App Messages and Audio, and email. <br /><br />
+        <b>Context Aware: </b>Multichannel is not enough, your customers expect to be able to switch between channels and keep the conversation going. Vonage Conversations allow you to keep the context across all channels<br /><br />
+        <b>Data Driven: </b>Learn from each customer interaction and continuously improve. Using Vonage Conversations you'll have all the each conversation's data and meta-data stored securely, allowing you to use them flexibly. Keep track of every event and get access to aggregate insights .<br /><br />
+        <b>Advanced and Future Proof: </b>Vonage Conversations is far more powerful than your regular API. With call recording and segmented transcription, text to speech and speech to text bundled into the connection between channels, and WebSockets to connect to any third-party extension you can dream of.<br /><br />
+      </HeroText>
     </div>
   </HeroFirst>
 }
@@ -54,16 +54,26 @@ const Card = styled.div`
 const FuncCard = ({title, image, text}) => {
   return <Card >
     <div>{title}</div>
-    <img  style={{width: "30px"}} src={image} />
+    <img  style={{width: "30px"}} src={image} alt="" />
     {text}
   </Card>
 }
 
-function Functionalities(){
+function Functionalities() {
   const functionalities = [
     {
       title: "Programable Voice Calls",
-      text:"",
+      text: "Call whisper, text to speech, speech to text, audio recording and transcription, sip trunking",
+      image: "https://www.vonage.co.uk/content/dam/vonage/us-en/brand/iconography/vonage/Volta-product-icons/Calling/call/glyph.svg"
+    },
+    {
+      title: "Browser and Native App SDKs",
+      text: "in-app calls, in-app chat, in-app video, customizable push notification",
+      image: "https://www.vonage.co.uk/content/dam/vonage/us-en/brand/iconography/vonage/Volta-product-icons/Calling/call/glyph.svg"
+    },
+    {
+      title: "Social channel messaging",
+      text: "Whatsapp, Facebook Messanger, Viber",
       image: "https://www.vonage.co.uk/content/dam/vonage/us-en/brand/iconography/vonage/Volta-product-icons/Calling/call/glyph.svg"
     }
   ]
@@ -85,28 +95,25 @@ function Functionalities(){
   return <p>
     Functionality of conversations:
     <div>{functionalities.map((el, idx) => {
-      return <FuncCard key={idx} {...el} />
-    })}</div>
-    
+    return <FuncCard key={idx} {...el} />
+  })}</div>
+
   </p>
 }
 
 
-function IntroPage(){
-  
+function IntroPage() {
+
   return (<div>
-    <Intro/>
+    <Intro />
     <Functionalities />
     <p>
-      
-    </p>
-    <p>
-      Create it with Conversation API
-      Create your own slack, with audio and chat
-      Build your own twitch with our video solution
-      Do your own call Center (mix ivr and human agents)
-      Create your real time chess app
-      create your social network
+      <b>Create it with Vonage Conversations</b><br /><br />
+      Create your own Contact Center (mix ivr, human agents, and AI bots across multiple channels) <br /><br />
+      Build your own Slack, with audio and chat <br /><br />
+      Build your own Twitch with our video solution <br /><br />
+      Create your real time chess app <br /><br />
+      create your social network <br /><br />
 
     </p>
   </div>)
